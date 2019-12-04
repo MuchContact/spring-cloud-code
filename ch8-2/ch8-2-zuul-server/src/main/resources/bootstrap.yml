@@ -25,4 +25,9 @@ security:
       client-secret: secret #OAuth2客户端密钥
     resource:
       jwt:
-        key-value: springcloud123 #使用对称加密方式，默认算法为HS256
+        key-value: springcloud123
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]
