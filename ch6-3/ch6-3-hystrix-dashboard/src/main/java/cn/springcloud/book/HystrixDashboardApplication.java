@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
  * @author zhudeming
  */
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @EnableHystrixDashboard
 public class HystrixDashboardApplication {
 

@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  */
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @EnableHystrix
 @EnableFeignClients
 public class HystrixExceptionApplication{
