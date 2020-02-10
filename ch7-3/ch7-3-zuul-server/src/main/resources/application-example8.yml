@@ -6,6 +6,7 @@ zuul:
     ribbon-route:
       path: /ribbon/**
       serviceId: ribbon-route
+      strip-prefix: true
 
 ribbon:
   eureka:
@@ -14,5 +15,6 @@ ribbon:
 ribbon-route:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule     #Ribbon LB Strategy
-    listOfServers: localhost:7070,localhost:7071     #client services for Ribbon LB
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule     #Ribbon LB Strategy
+    NFLoadBalancerPingClassName: com.netflix.loadbalancer.PingUrl
+    listOfServers: localhost:7070, localhost:7071    #client services for Ribbon LB
